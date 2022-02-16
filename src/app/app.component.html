@@ -1,0 +1,34 @@
+<div class="app-component">
+
+  <p align="center" class="banner"><img src="assets/images/banner.png"></p>
+
+  <div class="explanation">
+    <p>In New Zealand, it is often hard to ascertain the value that a property will sell for, so this additional pricing data point will allow the user to form a more complete picture of the likely sale price with other supplementary information from Homes and One Roof. It will also <b>save you time</b> between narrowing the search parameters on "RE" to find the listing price range. Instead of having a range of $50K or $100K, this tool <b>gets the exact price that the real estate agent has put as the listing price on "RE"</b>.</p>
+
+    <p>The content on this app is for informational and educational purposes only. This information should not be taken as financial, investment or legal advice.</p>
+
+    <p><b>Warning</b>: By running this app you may be in breach of RE's <a href="https://www.realestate.co.nz/terms-and-conditions" target="blank">terms and conditions</a>. Use at your own discretion.</p>
+
+    <p><b>Instructions</b>: Paste the listing URL <b>(ctrl+v)</b> from the "RE" website into the <i>'Enter URL:'</i> box. The search will take <b>~30 seconds</b>.</p>
+
+    <p><b>Known Issue</b>: At times, RE's website forces "human check", which will result in the listing error message. Just try again after waiting a little while.</p>
+
+  </div>
+
+  <p align="center" class="textbox">
+
+    <input (keydown.enter)="submit()" type="text" placeholder="Enter full URL here" id="url" [(ngModel)]="url" autofocus>
+
+  </p>
+
+  <div class="submit">
+
+    <button (click)="submit()"><b><font size=+2>Submit</font></b></button>
+
+  </div>
+
+  <div class="results" [innerHTML]="resultsHtml"></div>
+
+</div>
+
+<app-spinner></app-spinner>
